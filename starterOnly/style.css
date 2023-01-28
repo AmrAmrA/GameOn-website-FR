@@ -185,17 +185,12 @@ header {
 
 
 main {
-  font-size: 130%;
-  font-weight: bolder;
-  color: black;
+
   padding-top: 0.5vw;
   padding-left: 2vw;
   padding-right: 2vw;
   margin: 1px 20px 15px;
   border-radius: 2rem;
-  text-align: justify;
-
-
 }
 
 .modal-btn {
@@ -248,7 +243,6 @@ main {
   top: 0;
   height: 100%;
   width: 100%;
-  overflow: auto;
   background-color: rgba(26, 39, 156, 0.4);
 }
 
@@ -276,21 +270,30 @@ label {
   font-size: 17px;
   font-weight: normal;
   display: inline-block;
-  margin-bottom: 11px;
+  margin-bottom: 8px;
 }
 input {
-  padding: 8px;
+  padding: 10px;
   border: 0.8px solid #ccc;
   outline: none;
 }
 .text-control {
-  margin: 0;
-  padding: 8px;
   width: 100%;
   border-radius: 8px;
-  font-size: 20px;
-  height: 48px;
+  font-size: 16px;
 }
+
+.formData {
+  margin: 30px 0px;
+}
+.dataContainer {
+  margin-bottom: 10px;
+}
+.error__data {
+  color: red;
+  font-size: 16px;
+}
+
 .formData[data-error]::after {
   content: attr(data-error);
   font-size: 0.4em;

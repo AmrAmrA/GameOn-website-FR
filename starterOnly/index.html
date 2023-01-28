@@ -78,35 +78,53 @@
               onsubmit="return validate();"
             >
               <div
-                class="formData">
-                <label>Prénom</label><br>
-                <input
+                class="formData firstNameData">
+                <label for="firstName">Prénom</label><br>
+                <div class="firstName__container dataContainer">
+                  <input
                   class="text-control"
                   type="text"
-                  id="first"
-                  name="first"
+                  id="firstName"
+                  name="firstName"
                   minlength="2"
-                /><br>
+                  maxlength="24"
+                  required
+                  placeholder="2 caractères minimum"
+                  />
+                </div>
+                <span class="error__firstname error__data">Veuillez entrer 2 caractères minimum pour le champ Prénom</span>
               </div>
               <div
-                class="formData">
-                <label>Nom</label><br>
-                <input
+                class="formData nameData">
+                <label for ="lastName">Nom</label><br>
+                <div class="lastName__container dataContainer">
+                  <input
                   class="text-control"
                   type="text"
-                  id="last"
-                  name="last"
-                /><br>
+                  id="lastName"
+                  name="lastName"
+                  minlength="2"
+                  maxlength="24"
+                  required
+                  placeholder="2 caractères minimum"
+                  /><br>
+                </div>
+                <span class="error__firstname error__data">Veuillez entrer 2 caractères minimum pour le champ Nom</span>
               </div>
               <div
-                class="formData">
-                <label>E-mail</label><br>
-                <input
-                  class="text-control"
-                  type="email"
-                  id="email"
-                  name="email"
-                /><br>
+              class="formData mailData">
+                <label for="email">E-mail</label><br>
+                  <div class="email__container dataContainer">
+                    <input
+                    class="text-control"
+                    type="text"
+                    id="email"
+                    name="email"
+                    placeholder="Votre adresse mail"
+                    required
+                  /><br>
+                  </div>
+                  <span class="error__firstname error__data">Veuillez entrer un mail valide</span>
               </div>
               <div
                 class="formData">
