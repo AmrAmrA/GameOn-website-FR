@@ -247,7 +247,7 @@ main {
 }
 
 .content {
-  margin: 5% auto;
+  margin: 1% auto 0px auto;
   width: 100%;
   max-width: 500px;
   animation-name: modalopen;
@@ -279,19 +279,24 @@ input {
 }
 .text-control {
   width: 100%;
-  border-radius: 8px;
-  font-size: 16px;
+  border-radius: 15px;
 }
 
 .formData {
-  margin: 30px 0px;
+  margin: 5px 0px 0px 0px;
 }
 .dataContainer {
-  margin-bottom: 10px;
+  margin-bottom: 6px;
 }
 .error__data {
-  color: red;
-  font-size: 16px;
+  color: #f70d0dbd;
+  font-size: 15px;
+  display: none;
+}
+
+.error__termsConditions {
+  font-size: 12px;
+  margin-left: 36px;
 }
 
 .formData[data-error]::after {
@@ -342,18 +347,17 @@ input[data-error]::after {
 .checkbox-label .checkbox-icon::after,
 .checkbox2-label .checkbox-icon::after {
   content: "";
-  width: 13px;
-  height: 13px;
+  width: 19px;
+  height: 16px;
   background-color: #279e7a;
   border-radius: 50%;
-  text-indent: 29px;
-  white-space: nowrap;
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
   transition: 0.3s;
   opacity: 0;
+  cursor: pointer;
 }
 .checkbox-input {
   display: none;
@@ -371,15 +375,15 @@ input[data-error]::after {
   background: #c4c4c4;
 }
 .checkbox2-label .checkbox-icon::after {
-  width: 7px;
-  height: 4px;
+  width: 17px;
+  height: 7px;
   border-radius: 2px;
   background: transparent;
   border: 2px solid transparent;
   border-bottom-color: #fff;
   border-left-color: #fff;
   transform: rotate(-55deg);
-  left: 21%;
+  left: 10%;
   top: 19%;
 }
 .close {
@@ -409,7 +413,7 @@ input[data-error]::after {
 }
 .btn-submit,
 .btn-signup {
-  background: #fe142f;
+  background: #f83e54;
   display: block;
   margin: 0 auto;
   border-radius: 7px;
@@ -418,6 +422,10 @@ input[data-error]::after {
   color: #fff;
   cursor: pointer;
   border: 0;
+}
+
+.btn-submit:hover {
+  background: #ff001e;;
 }
 /* custom select styles */
 .custom-select {

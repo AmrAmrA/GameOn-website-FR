@@ -48,3 +48,42 @@ function closeModal() {
   modalbg.style.display = "none";
 }
 
+
+
+const errorMessages = document.querySelectorAll(".error__data");
+
+let firstnameInput = document.querySelector("#firstName");
+
+let lastNameInput = document.querySelector("#lastName");
+console.log(lastNameInput);
+
+lastNameInput.addEventListener('blur', lastNameValidation);
+lastNameInput.addEventListener('input', lastNameValidation);
+
+
+firstnameInput.addEventListener('blur', firstNameValidation);
+firstnameInput.addEventListener('input', firstNameValidation);
+const regexfirstName = /^[a-zA-Z-àâäéèêëïîôöùûüç ,.'-]+$/;
+
+
+function firstNameValidation() {
+  if (firstnameInput.value.length < 2 || !regexfirstName.test(firstnameInput.value)) {
+    errorMessages[0].style.display = "block";
+  } else {
+    errorMessages[0].style.display = "none";
+  }
+}
+
+function lastNameValidation() {
+  if (lastNameInput.value.length < 2 || !regexfirstName.test(lastNameInput.value)) {
+    errorMessages[1].style.display = "block";
+  } else {
+    errorMessages[1].style.display = "none";
+  }
+}
+
+// let personne = {prenom : "Jean", nom : "Dupont", age : 25, sexe : "homme", interets : ["musique", "cinéma", "sport"]};
+
+// let {prenom, nom, age, sexe, interets, salut} = personne;
+
+// console.log(prenom, nom, age, sexe, interets, salut);
