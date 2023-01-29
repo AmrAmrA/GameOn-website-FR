@@ -2,7 +2,7 @@ let menuIcon = document.querySelector(".menu__icon");
 let mobileMenu = document.querySelector(".mobile__menu");
 let filter = document.querySelector(".globalFilter");
 let crossSign = document.querySelector(".cross__sign");
-console.log(crossSign);
+
 
 
 menuIcon.addEventListener("click", menuAppearance)
@@ -31,7 +31,6 @@ const modalbg = document.querySelector(".bground");
 const modalBtn = document.querySelectorAll(".modal-btn");
 const formData = document.querySelectorAll(".formData");
 let closeBtn = document.querySelector(".close");
-console.log(closeBtn);
 
 // launch modal event
 modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
@@ -51,15 +50,20 @@ function closeModal() {
 
 
 const errorMessages = document.querySelectorAll(".error__data");
+const controlText = document.querySelectorAll(".text-control");
+
+
 
 let firstnameInput = document.querySelector("#firstName");
 let lastNameInput = document.querySelector("#lastName");
 let mailInput = document.querySelector("#email");
-console.log(mailInput);
+let birthdateInput = document.querySelector("#birthdate");
+console.log(birthdateInput.value);
 
 
 
-
+birthdateInput.addEventListener('blur', birthdateValidation);
+birthdateInput.addEventListener('input', birthdateValidation);
 mailInput.addEventListener('blur', mailValidation);
 mailInput.addEventListener('input', mailValidation);
 firstnameInput.addEventListener('blur', firstNameValidation);
@@ -72,8 +76,10 @@ lastNameInput.addEventListener('input', lastNameValidation);
 function showValidation({index, validation}) {
   if (validation) {
     errorMessages[index].style.display = "none";
+    controlText[index].style.border = "3px solid green";
   } else {
     errorMessages[index].style.display = "block";
+    controlText[index].style.border = "3px solid red";
   }
 }
 
@@ -104,6 +110,15 @@ function mailValidation() {
     showValidation({index: 2, validation: true});
   }
 }
+
+function birthdateValidation() {
+  if (birthdateInput.value.length < 1) {
+    showValidation({index: 3, validation: false});
+  } else {
+    showValidation({index: 3, validation: true});
+  }
+}
+
 
 // let personne = {prenom : "Jean", nom : "Dupont", age : 25, sexe : "homme", interets : ["musique", "cinéma", "sport"]};
 
