@@ -72,10 +72,6 @@
           <span class="close"></span>
           <div class="modal-body">
             <form
-              name="reserve"
-              action="index.html"
-              method="get"
-              onsubmit="return validate();"
             >
               <div
                 class="formData firstNameData">
@@ -88,7 +84,7 @@
                   name="firstName"
                   minlength="2"
                   maxlength="24"
-                  required
+                  
                   placeholder="2 caractères minimum"
                   autocomplete="off"
                   />
@@ -106,7 +102,7 @@
                   name="lastName"
                   minlength="2"
                   maxlength="24"
-                  required
+                  
                   placeholder="2 caractères minimum"
                   autocomplete="off"
                   /><br>
@@ -123,7 +119,7 @@
                     id="email"
                     name="email"
                     placeholder="Votre adresse mail"
-                    required
+                    
                     autocomplete="off"
                   /><br>
                   </div>
@@ -140,7 +136,7 @@
                   name="birthdate"
                   max="2005-01-01" 
                   min="1907-01-01" 
-                  required
+                  
                 /><br>
                 </div>
                 <span class="error__birthdate error__data">Veuillez entrer votre date de naissance </span>
@@ -148,8 +144,8 @@
               <div
                 class="formData">
                 <label for="quantity">À combien de tournois GameOn avez-vous déjà participé ?</label><br>
-                <input type="number" class="text-control" id="quantity" name="quantity" min="0" max="99" placeholder="Entre 0 et 99" required>
-                <span class="error__quantity error__data"> Vous devez indiquer votre nombre de participations </span>
+                <input type="number" class="text-control" id="quantity" name="quantity" min="0" max="99" placeholder="Entre 0 et 99" >
+                <span class="error__quantity error__data"> Vous devez indiquer entre 0 et 99 participations </span>
               </div>
               <p class="text-label">A quel tournoi souhaitez-vous participer cette année ?</p>
               <div
@@ -226,13 +222,13 @@
               <div
                 class="formData">
                 <input
-                  class="checkbox-input"
+                  class="checkbox-input checkboxConditions-input"
                   type="checkbox"
                   id="checkbox1"
-                  checked
+    
                 />
-                <label class="checkbox2-label" for="checkbox1" required>
-                  <span class="checkbox-icon" id = "checkbox1"></span>
+                <label class="checkbox2-label" for="checkbox1" >
+                  <span class="checkbox-icon" id ="checkbox1"></span>
                   J'ai lu et accepté les conditions d'utilisation.
                 </label>
                 <br>
