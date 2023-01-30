@@ -75,6 +75,9 @@ checkboxInput.addEventListener("blur", checkboxValidation);
 checkboxInput.addEventListener("input", checkboxValidation);
 // Launching event listener to submit the form
 form.addEventListener("submit", handleFormSubmit);
+// Launching event to show message for the user after submitting the form
+let crossSubscription = document.querySelector(".cross__subscription");
+let buttonSubscription = document.querySelector(".button__subscription");
 
 const inputsValidities = {
   firstName: false,
@@ -195,9 +198,7 @@ function handleFormSubmit(event) {
   }
 }
 
-let crossSubscription = document.querySelector(".cross__subscription");
-let buttonSubscription = document.querySelector(".button__subscription");
-console.log(buttonSubscription, crossSubscription);
+// Show the message to the user after submitting the form 
 crossSubscription.addEventListener("click", () => {
   subscriptionBlock.style.display = "none";
   modalbg.style.display = "none";
