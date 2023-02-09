@@ -31,6 +31,7 @@ let closeBtn = document.querySelector(".close");
 modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
 closeBtn.addEventListener("click", closeModal);
 
+
 // launch modal form
 function launchModal() {
   modalbg.style.display = "block";
@@ -195,6 +196,14 @@ function handleFormSubmit(event) {
   } else {
     content.style.display = "none";
     subscriptionBlock.style.display = "block";
+    // Show user's informations
+    console.log("firstName", firstnameInput.value);
+    console.log("lastName", lastNameInput.value);
+    console.log("email", mailInput.value);
+    console.log("birthdate", birthdateInput.value);
+    console.log("quantity", quantityInput.value);
+    console.log("checkboxConditions", checkboxInput.checked);
+    
   }
 }
 
