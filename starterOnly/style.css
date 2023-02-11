@@ -301,6 +301,11 @@ main {
   text-align: center;
 }
 
+form {
+  height: 350px;
+  overflow-y: auto;
+}
+
 .modal-body {
   padding: 15px 8%;
   margin: 15px auto;

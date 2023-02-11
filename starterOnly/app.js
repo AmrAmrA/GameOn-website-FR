@@ -56,7 +56,7 @@ let modalBody = document.querySelector(".modal-body");
 const form = document.querySelector("form");
 let content = document.querySelector(".content");
 let subscriptionBlock = document.querySelector(".subscription__block");
-
+let checkboxes = document.querySelectorAll(".checkbox-city");
 // DOM Elements representing the error messages and the input border
 const errorMessages = document.querySelectorAll(".error__data");
 const controlText = document.querySelectorAll(".text-control");
@@ -169,6 +169,19 @@ function quantityValidation() {
     inputsValidities.quantity = true;
   }
 }
+
+// Function to check if the user has checked at least one city
+function cityValidation() {
+  let checked = false;
+  checkboxes.forEach((checkbox) => {
+    if (checkbox.checked) {
+      checked = true;
+    }
+  })};
+  let  cityvalue = document.querySelector(".checkbox-city:checked").value;
+  cityValidation();
+
+
 // function to see if the checkbox is checked
 function checkboxValidation() {
   if (!checkboxInput.checked) {
@@ -179,6 +192,8 @@ function checkboxValidation() {
     inputsValidities.checkboxConditions = true;
   }
 }
+
+
 
 // function to submit the form
 function handleFormSubmit(event) {
@@ -197,14 +212,16 @@ function handleFormSubmit(event) {
     content.style.display = "none";
     subscriptionBlock.style.display = "block";
     // Show user's informations
-    console.log("firstName", firstnameInput.value);
-    console.log("lastName", lastNameInput.value);
-    console.log("email", mailInput.value);
-    console.log("birthdate", birthdateInput.value);
-    console.log("quantity", quantityInput.value);
-    console.log("checkboxConditions", checkboxInput.checked);
-    
+    console.log(
+    "firstName :", firstnameInput.value, 
+    "lastName :", lastNameInput.value, 
+    "email :", mailInput.value, 
+    "birthdate :", birthdateInput.value, 
+    "quantity :",  quantityInput.value, 
+    "city :", cityvalue, 
+    "checkboxConditions :",checkboxInput.checked);
   }
+  form.reset(); // Reset the form
 }
 
 // Show the message to the user after submitting the form 
