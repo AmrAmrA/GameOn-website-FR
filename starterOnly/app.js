@@ -133,7 +133,7 @@ function lastNameValidation() {
 }
 
 // Regex for the email
-const regexMail = /^[a-zA-Z0-9._-]+[@]{1}[a-zA-Z0-9._-]+[.]{1}[a-z]{2,10}$/;
+const regexMail = /^[a-zA-Z0-9._-]+[@]{1}[a-zA-Z._-]{2,}[.]{1}[a-z]{2,10}$/;
 // Function to check if email is valid
 function mailValidation() {
   if (!regexMail.test(mailInput.value)) {

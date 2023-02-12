@@ -244,6 +244,7 @@ main {
   height: 100%;
   width: 100%;
   background-color: rgba(26, 39, 156, 0.4);
+  overflow-y: auto;
 }
 .shake {
   animation: shake 0.4s;
@@ -301,10 +302,6 @@ main {
   text-align: center;
 }
 
-form {
-  height: 350px;
-  overflow-y: auto;
-}
 
 .modal-body {
   padding: 15px 8%;
