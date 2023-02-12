@@ -220,8 +220,8 @@ function handleFormSubmit(event) {
     "quantity :",  quantityInput.value, 
     "city :", cityvalue, 
     "checkboxConditions :",checkboxInput.checked);
+    form.reset(); // Reset the form
   }
-  form.reset(); // Reset the form
 }
 
 // Show the message to the user after submitting the form 
